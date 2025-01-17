@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kursy komputerowe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="naglowek">
+      <img src="baner.png" alt="kursy komputerowe" />
+    </header>
+
+    <nav id="menu">
+      <a href="index.html">Strona główna</a>
+      <a href="raty.html">Koszt rat</a>
+      <a href="https://moje-szkolenia.pl">Nasz partner</a>
+    </nav>
+    <section id="glowny"></section>
+        <h3>Oblicz miesięczną ratę</h3>
+        
+            <input type="checkbox" class="kontrolki"><label>Kurs React.js</label><br>
+            <input type="checkbox" class="kontrolki"><label>Kurs JavaScript</label><br>
+            <label>Liczba rat:</label><input type="number" class="kontrolki"><br>
+            <select class="kontrolki">
+                <option value="Warszawa">Warszawa</option> 
+                <option value="Katowice">Katowice</option> 
+                <option value="Gdańsk">Gdańsk</option>
+            </select><br>
+            <button class="kontrolki" onclick="obliczRate()">Oblicz</button>
+            <p id="wynik"></p>
+        
+    <footer id="stopka">
+      <p>Autor strony: 00000000000</p>
+    </footer>
+    <script>
+      function obliczRate() {
+        const kursy = [
+          { name: "Kurs React.js", price: 1000 },
+          { name: "Kurs JavaScript", price: 800 }
+        ];
+    
+        let totalCost = 0;
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+        checkboxes.forEach(checkbox => {
+          const label = checkbox.nextElementSibling.innerText;
+          const kurs = kursy.find(k => k.name === label);
+          if (kurs) {
+            totalCost += kurs.price;
+          }
+        });
+    
+        const liczbaRat = parseInt(document.querySelector('input[type="number"]').value);
+        const miasto = document.querySelector('select').value;
+        const rata = (totalCost / liczbaRat).toFixed(2);
+    
+        const wynik = `Kurs odbędzie się w ${miasto}. Koszt całkowity: ${totalCost} zł. Płacisz ${liczbaRat} rat po ${rata} zł`;
+        document.getElementById('wynik').innerText = wynik;
+      }
+    </script>
+  </body>
+</html>
