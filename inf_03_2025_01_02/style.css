@@ -1,0 +1,65 @@
+/* Domyślnie, dla wszystkich selektorów */
+* {
+  font-family: Georgia, serif;
+}
+
+/* Dla selektora ciała strony */
+body {
+  text-align: center;
+}
+
+/* Dla bloku nagłówkowego */
+#naglowek {
+  padding: 30px;
+  background: linear-gradient(to bottom, #A0522D, #F5DEB3);
+}
+
+/* Dla bloku menu */
+#menu {
+  background-color: Wheat;
+  padding: 14px;
+}
+
+/* Dla bloku głównego */
+#głowny {
+  background-color: Wheat;
+  padding: 50px;
+}
+
+/* Dla stopki */
+#stopka {
+  padding: 30px;
+  background: linear-gradient(to bottom, #F5DEB3, #A0522D);
+}
+
+/* Dla selektora odnośnika */
+a {
+  background-color: Sienna;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px;
+  margin: 20px;
+}
+
+/* Gdy kursor myszy znajdzie się na odnośniku */
+a:hover {
+  text-decoration: underline;
+}
+
+/* Wspólne dla selektora tabeli i selektora komórki tabeli */
+table, td {
+  border: 1px solid Sienna;
+  border-collapse: collapse;
+}
+
+/* Dodatkowo dla selektora tabeli */
+table {
+  width: 70%;
+  margin: auto;
+}
+
+/* Dla selektora komórki tabeli */
+td {
+  padding: 5px;
+}
