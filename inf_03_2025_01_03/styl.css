@@ -1,0 +1,27 @@
+body {
+    font-family: Bookman, Serif;
+}
+header, footer {
+    background: Indigo;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+section p {
+    background: BlueViolet;
+    color: white;
+    font-size: 150%;
+    font-style: italic;
+    padding: 10px;
+    text-align: right;
+}
+table, th, td {
+    border: 1px solid Indigo;
+    border-collapse: collapse;
+    padding: 3px;
+}
+img {
+    float: right;
+    width: 50%;
+    padding: 10 px;
+}
